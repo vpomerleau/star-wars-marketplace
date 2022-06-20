@@ -1,0 +1,32 @@
+// COLORS
+
+
+// TYPOGRAPHY - font family and fallbacks
+
+//Default font-sizes
+
+
+//Default line heights
+
+
+// ICONS
+
+
+// BREAKPOINTS
+// Using em units as recommended https://zellwk.com/blog/media-query-units/
+$tablet:48em;
+$desktop:80em;
+
+// SPACING
+
+
+// ANIMATIONS
+// For simple feedback animations (ex. toggles, checkbox)
+// Feels immediate but enough to make feedback noticeable
+$short-animation-time:0.2s;
+
+// For more substantial changes (ex. modals) disappearing/exiting
+$medium-animation-time:0.4s;
+
+// For more substantial changes (ex. modals) appearing
+$long-animation-time:0.6s;

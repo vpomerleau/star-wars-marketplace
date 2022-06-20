@@ -1,0 +1,19 @@
+// SCSS architecture based on 5-1 method (excluding vendors)
+// https://matthewelsom.com/blog/simple-scss-playbook.html
+
+@forward './abstracts';
+
+@use './abstracts' as *;
+@use './base' as *;
+@use './components';
+@use './layouts';
+
+*, *::before, *::after {
+    box-sizing:border-box;
+}
+
+body {
+    margin:0;
+}
+
+// For general containers

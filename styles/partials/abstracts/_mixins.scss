@@ -1,0 +1,44 @@
+@use './variables' as *;
+
+// --IMAGES--
+// Set a background image
+@mixin background($url) {
+    background-image:url($url);
+    background-position:center;
+    background-size:cover;
+}
+
+// --MEDIA QUERIES--
+@mixin mobile-only {
+    @media screen and (max-width:calc($tablet - 1px)){
+        @content;
+    }
+}
+
+@mixin for-tablet {
+    @media screen and (min-width:$tablet){
+        @content;
+    }
+}
+
+@mixin for-desktop {
+    @media screen and (min-width:$desktop){
+        @content;
+    }
+}
+
+// --STANDARD SPACING--
+
+
+// ACCESSIBILITY
+
+// Hide elements from sighted users but not screen readers
+@mixin visually-hidden {
+    clip: rect(0 0 0 0);
+    clip-path: inset(50%);
+    height: 1px;
+    overflow: hidden;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
