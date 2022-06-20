@@ -1,0 +1,5 @@
+# Ignore MacOS system file for thumbnails
+.DS_Store
+
+# Ignore scss map files
+*.css.map
