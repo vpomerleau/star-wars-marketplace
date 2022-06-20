@@ -4,14 +4,46 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="./styles/style.css">
+    <!-- Move to bottom? -->
     <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="./scripts/script.js" defer></script>
     <title>Document</title>
 </head>
 <body>
-  
-    
+  <header class="header"></header>
+  <section class="hero">
+      <h1 class="hero__header">Star Wars</h1>
+      <p class="description">Description goes here</p>
+      <a href="">Button text</a>
+      <div class="hero__images"></div>
+  </section>  
+  <section class="cards">
+    <div class="card">
+        <div class="card__inner">
+            <div class="card__front">
+                <!-- @to-do Include images? -->
+                <img class="card__image" src="" alt="">
+                <!-- "cost_in_credits": "3500000", -->
+                <h2 class="card__name"><!-- "name": "CR90 corvette", --></h2>
+                <a class="card__button"></a>
+            </div>
+            <div class="card card__back">
+                <h3 class="card__category"></h3>
+                <p class="card__info"></p>
+                <!-- 
+                "starship_class": "corvette"
+                "model": "CR90 corvette",
+                "manufacturer": "Corellian Engineering Corporation",
+                "max_atmosphering_speed": "950",
+                "crew": "30-165",
+                "hyperdrive_rating": "2.0",
+ -->
 
+            </div>
+        </div>
+    </div>
+  </section>
+  <footer class="footer"></footer>
 </body>
 </html>
