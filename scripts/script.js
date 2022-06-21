@@ -5,10 +5,57 @@ const vehiclesUrl = "https://swapi.dev/api/vehicles/";
 let starshipsArray = [];
 let vehiclesArray = [];
 
-function makeCard(){
-    starshipsArray.forEach((user)=>{
-    const section =  document.getElementById("starship-cards");  
-      
+// build starship cards
+axios.get(starshipsUrl)
+.then(response => {
+    response.data.results.forEach(object =>
+        starshipsArray.push(object));
+    makeStarshipCards(starshipsArray);
+})
+
+// build vehicle cards
+axios.get(vehiclesUrl)
+.then(response => {
+    response.data.results.forEach(object =>
+        vehiclesArray.push(object));
+    makeVehicleCards(vehiclesArray)
+})
+
+// Display starship cards and hide vehicle cards when "starship" button clicked
+const starshipButton = document.getElementById("btn-starships");
+starshipButton.addEventListener('click',(event) => 
+{
+    event.preventDefault();
+    const starshipsSection =  document.getElementById("starship-cards");
+    const vehiclesSection =  document.getElementById("vehicles-cards");
+    if (starshipsSection.classList.contains('cards--hidden')) {
+        starshipsSection.classList.remove('cards--hidden');
+        if (vehiclesSection.classList.contains('cards--hidden')===false){
+            vehiclesSection.classList.add('cards--hidden');
+        }
+    };
+});
+
+// Display starship cards and hide vehicle cards when "starship" button clicked
+const vehiclesButton = document.getElementById("btn-vehicles");
+vehiclesButton.addEventListener('click', (event) => 
+{ 
+    event.preventDefault();
+    const vehiclesSection =  document.getElementById("vehicle-cards");
+    const starshipsSection =  document.getElementById("starship-cards");
+    if (vehiclesSection.classList.contains('cards--hidden')) {
+        vehiclesSection.classList.remove('cards--hidden');
+        if (starshipsSection.classList.contains('cards--hidden')===false){
+            starshipsSection.classList.add('cards--hidden');
+        }
+    };
+})
+
+function makeStarshipCards(array){
+    const section =  document.getElementById("starship-cards");
+    section.classList.add('cards--hidden');
+
+    array.forEach((user)=>{        
     const card =  document.createElement("div");
     card.classList.add("card");
     section.appendChild(card);
@@ -98,26 +145,11 @@ function makeCard(){
     })
 }
 
+function makeVehicleCards(array){
+    const section = document.getElementById("vehicle-cards");
+    section.classList.add('cards--hidden');  
 
-const button = document.getElementById("btn-starships");
-
-button.addEventListener('click',(event) => 
-{
-    event.preventDefault();
-    makeCard(event)
-}, {once: true});
-
-
-axios.get(starshipsUrl)
-.then(response => {
-    response.data.results.forEach(object =>
-        starshipsArray.push(object));
-});
-
-function makeCardTwo(){
-    vehiclesArray.forEach((user)=>{
-    const section =  document.getElementById("vehicle-cards");  
-      
+    array.forEach((user)=>{    
     const card =  document.createElement("div");
     card.classList.add("card");
     section.appendChild(card);
@@ -211,19 +243,4 @@ function makeCardTwo(){
     cardBack.appendChild(cardButton);
     })
 }
-
-axios.get(vehiclesUrl)
-.then(response => {
-    response.data.results.forEach(object =>
-        vehiclesArray.push(object));
-    console.log(vehiclesArray);
-})
-
-const buttonTwo = document.getElementById("btn-vehicles");
-
-buttonTwo.addEventListener('click', (event) => 
-{ 
-    event.preventDefault();
-    makeCardTwo(event)
-}, {once: true});
 

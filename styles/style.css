@@ -187,6 +187,9 @@ p, a {
   justify-content: space-evenly;
   flex-wrap: wrap;
 }
+.cards--hidden {
+  visibility: hidden;
+}
 
 .footer {
   width: 100%;

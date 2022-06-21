@@ -5,5 +5,9 @@
     display: flex;
     justify-content: space-evenly;
     flex-wrap:wrap;
+
+    &--hidden {
+        visibility:hidden;
+    }
 }
 
