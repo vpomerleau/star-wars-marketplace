@@ -6,20 +6,28 @@ let starshipsArray = [];
 let vehiclesArray = [];
 
 // build starship cards
-axios.get(starshipsUrl)
+axios
+.get(starshipsUrl)
 .then(response => {
     response.data.results.forEach(object =>
         starshipsArray.push(object));
     makeStarshipCards(starshipsArray);
 })
+.catch(error => {
+    console.log(error);
+});
 
 // build vehicle cards
-axios.get(vehiclesUrl)
+axios
+.get(vehiclesUrl)
 .then(response => {
     response.data.results.forEach(object =>
         vehiclesArray.push(object));
     makeVehicleCards(vehiclesArray)
 })
+.catch(error => {
+    console.log(error);
+});
 
 // Display starship cards and hide vehicle cards when "starship" button clicked
 const starshipButton = document.getElementById("btn-starships");
@@ -27,7 +35,7 @@ starshipButton.addEventListener('click',(event) =>
 {
     event.preventDefault();
     const starshipsSection =  document.getElementById("starship-cards");
-    const vehiclesSection =  document.getElementById("vehicles-cards");
+    const vehiclesSection =  document.getElementById("vehicle-cards");
     if (starshipsSection.classList.contains('cards--hidden')) {
         starshipsSection.classList.remove('cards--hidden');
         if (vehiclesSection.classList.contains('cards--hidden')===false){
