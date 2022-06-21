@@ -5,6 +5,7 @@
     position: relative;
     width: 22vw;
     height: 48vh;
+    margin-bottom:$base-padding-double;
     background-color: $secondary-med;
     border: 1px solid $secondary-dark;
     border-radius: 5px;
@@ -80,12 +81,11 @@
         color: $secondary-light;
         padding: 1vh 4vw;
         border-radius: 5px;
-    }
 
-    // Make the button the hover effect
-    &__button--hover {
-        background-color: $primary-accent;
-        color: $secondary-dark;
+        &:hover {
+            background-color: $primary-accent;
+            color: $secondary-dark;
+        }
     }
 
     &__category {

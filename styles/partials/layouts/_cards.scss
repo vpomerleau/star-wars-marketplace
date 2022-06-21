@@ -3,7 +3,8 @@
 // container for cards
 .cards {
     display: flex;
-    padding: 10vh 10vw;
+    padding: $base-padding-double;
     justify-content: space-between;
+    flex-wrap:wrap;
 }
 

@@ -87,6 +87,7 @@ p, a {
   position: relative;
   width: 22vw;
   height: 48vh;
+  margin-bottom: 1rem;
   background-color: #BFBFBF;
   border: 1px solid #3D3D3D;
   border-radius: 5px;
@@ -155,7 +156,7 @@ p, a {
   padding: 1vh 4vw;
   border-radius: 5px;
 }
-.card__button--hover {
+.card__button:hover {
   background-color: #FDD623;
   color: #3D3D3D;
 }
@@ -175,14 +176,14 @@ p, a {
 
 .cards {
   display: flex;
-  padding: 10vh 10vw;
+  padding: 1rem;
   justify-content: space-between;
+  flex-wrap: wrap;
 }
 
 .footer {
   width: 100%;
-  position: absolute;
-  bottom: 0;
+  margin: 0;
   padding: 1rem;
   background-color: black;
   color: #F2F2F2;
