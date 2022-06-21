@@ -94,7 +94,7 @@ p, a {
   text-transform: uppercase;
   perspective: 1000px;
 }
-.card--click .card__inner {
+.card:hover .card__inner {
   transform: rotateY(180deg);
 }
 .card__inner {
@@ -161,7 +161,7 @@ p, a {
   color: #3D3D3D;
 }
 .card__category {
-  color: #BFBFBF;
+  color: #F2F2F2;
   font-size: 0.8em;
   margin: 0;
   padding-bottom: 0.4vh;

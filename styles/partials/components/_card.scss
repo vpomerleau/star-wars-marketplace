@@ -13,7 +13,7 @@
     perspective: 1000px;
 
     // I think we should make it so clicking on the card flips it
-    &--click &__inner {
+    &:hover &__inner {
         transform: rotateY(180deg);
     }
 
@@ -89,7 +89,7 @@
     }
 
     &__category {
-        color: $secondary-med;
+        color: $secondary-light;
         font-size: .8em;
         margin: 0;
         padding-bottom: .4vh;

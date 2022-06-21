@@ -44,50 +44,50 @@ function makeCard(){
     cardBack.classList.add("card", "card__back");
     cardInner.appendChild(cardBack);
 
-    const cardCatagory = document.createElement("h3");
-    cardCatagory.classList.add("card__catagory");
-    cardCatagory.innerText = "Starship Class"; 
-    cardBack.appendChild(cardCatagory);
+    const cardcategory = document.createElement("h3");
+    cardcategory.classList.add("card__category");
+    cardcategory.innerText = "Starship Class"; 
+    cardBack.appendChild(cardcategory);
 
     const cardInfo = document.createElement("p");
     cardInfo.classList.add("card__info");
     cardInfo.innerText = user.model;
     cardBack.appendChild(cardInfo);
 
-    const cardCatagory2 = document.createElement("h3");
-    cardCatagory2.classList.add("card__catagory");
-    cardCatagory2.innerText = "Manufacturer"; 
-    cardBack.appendChild(cardCatagory2);
+    const cardcategory2 = document.createElement("h3");
+    cardcategory2.classList.add("card__category");
+    cardcategory2.innerText = "Manufacturer"; 
+    cardBack.appendChild(cardcategory2);
 
     const cardInfo2 = document.createElement("p");
     cardInfo2.classList.add("card__info");
     cardInfo2.innerText = user.manufacturer;
     cardBack.appendChild(cardInfo2);
 
-    const cardCatagory3 = document.createElement("h3");
-    cardCatagory3.classList.add("card__catagory");
-    cardCatagory3.innerText = "Max Atmosphering Speed"; 
-    cardBack.appendChild(cardCatagory3);
+    const cardcategory3 = document.createElement("h3");
+    cardcategory3.classList.add("card__category");
+    cardcategory3.innerText = "Max Atmosphering Speed"; 
+    cardBack.appendChild(cardcategory3);
 
     const cardInfo3 = document.createElement("p");
     cardInfo3.classList.add("card__info");
     cardInfo3.innerText = user.max_atmosphering_speed;
     cardBack.appendChild(cardInfo3);
 
-    const cardCatagory4 = document.createElement("h3");
-    cardCatagory4.classList.add("card__catagory");
-    cardCatagory4.innerText = "HyperDrive Rating"; 
-    cardBack.appendChild(cardCatagory4);
+    const cardcategory4 = document.createElement("h3");
+    cardcategory4.classList.add("card__category");
+    cardcategory4.innerText = "HyperDrive Rating"; 
+    cardBack.appendChild(cardcategory4);
 
     const cardInfo4 = document.createElement("p");
     cardInfo4.classList.add("card__info");
     cardInfo4.innerText = user.hyperdrive_rating;
     cardBack.appendChild(cardInfo4);
 
-    const cardCatagory5 = document.createElement("h3");
-    cardCatagory5.classList.add("card__catagory");
-    cardCatagory5.innerText = "Crew"; 
-    cardBack.appendChild(cardCatagory5);
+    const cardcategory5 = document.createElement("h3");
+    cardcategory5.classList.add("card__category");
+    cardcategory5.innerText = "Crew"; 
+    cardBack.appendChild(cardcategory5);
     
     const cardInfo5 = document.createElement("p");
     cardInfo5.classList.add("card__info");
@@ -149,50 +149,50 @@ function makeCardTwo(){
     cardBack.classList.add("card", "card__back");
     cardInner.appendChild(cardBack);
 
-    const cardCatagory = document.createElement("h3");
-    cardCatagory.classList.add("card__catagory");
-    cardCatagory.innerText = "Starship Class"; 
-    cardBack.appendChild(cardCatagory);
+    const cardcategory = document.createElement("h3");
+    cardcategory.classList.add("card__category");
+    cardcategory.innerText = "Starship Class"; 
+    cardBack.appendChild(cardcategory);
 
     const cardInfo = document.createElement("p");
     cardInfo.classList.add("card__info");
     cardInfo.innerText = user.model;
     cardBack.appendChild(cardInfo);
 
-    const cardCatagory2 = document.createElement("h3");
-    cardCatagory2.classList.add("card__catagory");
-    cardCatagory2.innerText = "Manufacturer"; 
-    cardBack.appendChild(cardCatagory2);
+    const cardcategory2 = document.createElement("h3");
+    cardcategory2.classList.add("card__category");
+    cardcategory2.innerText = "Manufacturer"; 
+    cardBack.appendChild(cardcategory2);
 
     const cardInfo2 = document.createElement("p");
     cardInfo2.classList.add("card__info");
     cardInfo2.innerText = user.manufacturer;
     cardBack.appendChild(cardInfo2);
 
-    const cardCatagory3 = document.createElement("h3");
-    cardCatagory3.classList.add("card__catagory");
-    cardCatagory3.innerText = "Max Atmosphering Speed"; 
-    cardBack.appendChild(cardCatagory3);
+    const cardcategory3 = document.createElement("h3");
+    cardcategory3.classList.add("card__category");
+    cardcategory3.innerText = "Max Atmosphering Speed"; 
+    cardBack.appendChild(cardcategory3);
 
     const cardInfo3 = document.createElement("p");
     cardInfo3.classList.add("card__info");
     cardInfo3.innerText = user.max_atmosphering_speed;
     cardBack.appendChild(cardInfo3);
 
-    const cardCatagory4 = document.createElement("h3");
-    cardCatagory4.classList.add("card__catagory");
-    cardCatagory4.innerText = "HyperDrive Rating"; 
-    cardBack.appendChild(cardCatagory4);
+    const cardcategory4 = document.createElement("h3");
+    cardcategory4.classList.add("card__category");
+    cardcategory4.innerText = "HyperDrive Rating"; 
+    cardBack.appendChild(cardcategory4);
 
     const cardInfo4 = document.createElement("p");
     cardInfo4.classList.add("card__info");
     cardInfo4.innerText = user.hyperdrive_rating;
     cardBack.appendChild(cardInfo4);
 
-    const cardCatagory5 = document.createElement("h3");
-    cardCatagory5.classList.add("card__catagory");
-    cardCatagory5.innerText = "Crew"; 
-    cardBack.appendChild(cardCatagory5);
+    const cardcategory5 = document.createElement("h3");
+    cardcategory5.classList.add("card__category");
+    cardcategory5.innerText = "Crew"; 
+    cardBack.appendChild(cardcategory5);
     
     const cardInfo5 = document.createElement("p");
     cardInfo5.classList.add("card__info");
@@ -201,6 +201,8 @@ function makeCardTwo(){
     })
 }
 
+const button = document.getElementById();
+button.addEventListener('click',getCards);
 
 axios.get(vehiclesUrl)
 .then(response => {
