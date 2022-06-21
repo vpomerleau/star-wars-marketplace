@@ -10,36 +10,37 @@
     <title>Document</title>
 </head>
 <body>
-  <header class="header">      
-    <p class="header__logo">Star Wars</p>
-  </header>
-  <main>
-  <section class="hero">
-    <div class="hero__container">
-      <div class="hero__left">
-        <h1 class="hero__title">Marketplace</h1>
-        <p class="hero__description">Get all the vehicles and ships you need!</p>
+  <div class="container">
+    <header class="header">      
+      <p class="header__logo">Star Wars</p>
+    </header>
+    <main>
+    <section class="hero">
+      <div class="hero__container">
+        <div class="hero__left">
+          <h1 class="hero__title">Marketplace</h1>
+          <p class="hero__description">Get all the vehicles and ships you need!</p>
+        </div>
+        <div class="hero__right">
+          <img class="hero__image" src="./assets/images/star-destroyer.png">
+        </div>
       </div>
-      <div class="hero__right">
-        <img class="hero__image" src="./assets/images/star-destroyer.png">
-      </div>
-    </div>
-  </section> 
+    </section> 
 
-  <section class="navigation">
-    <a class="button navigation__button" href="">Starships</a>
-    <a class="button navigation__button button--unavailable" href="">Vehicles</a>
-  </section>
+    <section class="navigation">
+      <a class="button navigation__button" id="btn-starships" href="">Starships</a>
+      <a class="button navigation__button" id="btn-vehicles" href="">Vehicles</a>
+    </section>
 
-  <section class="cards"></section>
-  <section class="cards-two"></section>
+    <section class="cards" id="starship-cards"></section>
+    <section class="cards" id="vehicle-cards"></section>
 
-  </main>
-<!-- @to-do fix footer -->
-  <!-- <footer class="footer">
-    <p class="footer__text">Star Wars Marketplace</p>
-    <p class="footer__text">Created by Ashkan Bossani, Audun Young and Valerie Pomerleau</p>
-  </footer> -->
+    </main>
+  </div>
+
+  <footer class="footer">
+    <p class="footer__text">Star Wars Marketplace created by Ashkan Bossani, Audun Young and Valerie Pomerleau with <a class="footer__link" href="https://swapi.dev/">https://swapi.dev/</a></p>
+  </footer>
 
   <script src="./scripts/script.js"></script>
 </body>

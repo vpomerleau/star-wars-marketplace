@@ -23,14 +23,4 @@
         background-color: $primary-light;
         outline:5px solid $primary-accent;
     }
-
-    &--unavailable {
-        background-color:$secondary-med;
-        font-size:$font-small;
-
-        &:hover {
-            background-color: $secondary-med;
-            outline:none;
-        }
-    }
 }

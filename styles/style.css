@@ -43,6 +43,19 @@ h1 {
   margin: 0 0 0.5rem 0;
 }
 
+h2 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 600;
+  letter-spacing: 3px;
+  padding-top: 0.5rem;
+}
+
+h3 {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 400;
+  letter-spacing: 3px;
+}
+
 p, a {
   font-family: "Orbitron", sans-serif;
   font-weight: 500;
@@ -73,21 +86,13 @@ p, a {
   background-color: white;
   outline: 5px solid #FDD623;
 }
-.button--unavailable {
-  background-color: #BFBFBF;
-  font-size: 1rem;
-}
-.button--unavailable:hover {
-  background-color: #BFBFBF;
-  outline: none;
-}
 
 .card {
   text-align: center;
   position: relative;
-  width: 22vw;
-  height: 48vh;
-  margin-bottom: 1rem;
+  width: 24rem;
+  height: 38rem;
+  margin-bottom: 3rem;
   background-color: #BFBFBF;
   border: 1px solid #3D3D3D;
   border-radius: 5px;
@@ -108,10 +113,10 @@ p, a {
   backface-visibility: hidden;
   -webkit-backface-visibility: hidden;
   position: absolute;
-  left: 1.3vw;
-  top: 2.2vh;
-  height: 43vh;
-  width: 19vw;
+  left: 2rem;
+  top: 1.5rem;
+  height: 35rem;
+  width: 20rem;
   border: 1px solid #3D3D3D;
   border-radius: 5px;
   background-image: url("../../../assets/images/starship-04.png");
@@ -124,36 +129,40 @@ p, a {
   -webkit-backface-visibility: hidden;
   transform: rotateY(180deg);
   position: absolute;
-  left: 1.3vw;
-  top: 2.2vh;
-  height: 43vh;
-  width: 19vw;
+  left: 2rem;
+  top: 1.5rem;
+  height: 35rem;
+  width: 20rem;
   border: 1px solid #3D3D3D;
   border-radius: 5px;
   background-color: #3D3D3D;
-  padding-left: 1vw;
+  padding-left: 0.5rem;
 }
 .card__name {
   color: #3D3D3D;
-  margin-top: 0.5vh;
-  font-size: 1.4em;
+  margin-top: 0.75rem;
 }
 .card__price {
   position: absolute;
-  bottom: 7vh;
-  left: 4.5vw;
-  display: inline-block;
-  width: 10vw;
+  margin: 0 auto;
+  bottom: 7rem;
+  left: 0;
+  right: 0;
+  display: block;
 }
 .card__button {
-  font-size: 1.2em;
-  margin-left: auto;
   position: absolute;
-  bottom: 2vh;
-  left: 12%;
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  margin: 0 auto;
+  padding: 0.5rem 1rem;
+  bottom: 2rem;
+  left: 0;
+  right: 0;
   background-color: #3D3D3D;
   color: #F2F2F2;
-  padding: 1vh 4vw;
+  font-size: 1.2rem;
   border-radius: 5px;
 }
 .card__button:hover {
@@ -162,22 +171,20 @@ p, a {
 }
 .card__category {
   color: #F2F2F2;
-  font-size: 0.8em;
+  font-size: 0.8rem;
   margin: 0;
-  padding-bottom: 0.4vh;
-  padding-top: 1.2vh;
+  padding-bottom: 0.5rem;
+  padding-top: 1.2rem;
 }
 .card__info {
-  text-transform: regularcase;
-  font-size: 1.3em;
+  font-size: 1.2rem;
   margin: 0;
   color: #FDD623;
 }
 
 .cards {
   display: flex;
-  padding: 1rem;
-  justify-content: space-between;
+  justify-content: space-evenly;
   flex-wrap: wrap;
 }
 
@@ -190,6 +197,9 @@ p, a {
   text-align: center;
   font-size: 0.6rem;
   line-height: 1rem;
+}
+.footer__link {
+  color: white;
 }
 
 .header {
@@ -310,6 +320,10 @@ body {
 body {
   background: url("../assets/images/star-wars-backgrounds.jpg") no-repeat center center fixed;
   background-size: cover;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+  justify-content: space-between;
 }
 
 main {

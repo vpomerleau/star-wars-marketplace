@@ -20,6 +20,19 @@ h1 {
 //    }
 }
 
+h2 {
+    font-family:$body-fonts;
+    font-weight: 600;
+    letter-spacing: 3px;
+    padding-top:$base-padding;
+}
+
+h3 {
+    font-family:$body-fonts;
+    font-weight:400;
+    letter-spacing:3px;
+}
+
 p, a {
     font-family: $body-fonts;
     font-weight:500;

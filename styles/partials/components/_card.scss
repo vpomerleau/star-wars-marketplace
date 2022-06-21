@@ -3,9 +3,9 @@
 .card {
     text-align: center;
     position: relative;
-    width: 22vw;
-    height: 48vh;
-    margin-bottom:$base-padding-double;
+    width: 24rem;
+    height: 38rem;
+    margin-bottom:3rem;
     background-color: $secondary-med;
     border: 1px solid $secondary-dark;
     border-radius: 5px;
@@ -29,10 +29,10 @@
         backface-visibility: hidden;
         -webkit-backface-visibility: hidden;
         position: absolute;
-        left: 1.3vw;
-        top: 2.2vh;
-        height:43vh;
-        width: 19vw;
+        left: 2rem;
+        top: 1.5rem;
+        height:35rem;
+        width: 20rem;
         border: 1px solid $secondary-dark;
         border-radius: 5px;
         background-image: url("../../../assets/images/starship-04.png");
@@ -47,39 +47,41 @@
         -webkit-backface-visibility: hidden;
         transform: rotateY(180deg);
         position: absolute;
-        left: 1.3vw;
-        top: 2.2vh;
-        height:43vh;
-        width: 19vw;
+        left: 2rem;
+        top: 1.5rem;
+        height:35rem;
+        width: 20rem;
         border: 1px solid $secondary-dark;
         border-radius: 5px;
         background-color: $secondary-dark;
-        padding-left: 1vw;
+        padding-left: $base-padding;
     }
 
     &__name {
         color: $secondary-dark;
-        margin-top: .5vh;
-        font-size: 1.4em;
+        margin-top: .75rem;
     }
 
     &__price {
         position: absolute;
-        bottom: 7vh;
-        left: 4.5vw;
-        display: inline-block;
-        width: 10vw;
+        margin:0 auto;
+        bottom: 7rem;
+        left:0;
+        right:0;
+        display: block;
     }
 
     &__button {
-        font-size: 1.2em;
-        margin-left: auto;
         position: absolute;
-        bottom: 2vh;
-        left: 12%;
+        width:fit-content;
+        margin:0 auto;
+        padding: .5rem 1rem;
+        bottom: 2rem;
+        left: 0;
+        right:0;
         background-color: $secondary-dark;
         color: $secondary-light;
-        padding: 1vh 4vw;
+        font-size: 1.2rem;
         border-radius: 5px;
 
         &:hover {
@@ -90,15 +92,14 @@
 
     &__category {
         color: $secondary-light;
-        font-size: .8em;
+        font-size: 0.8rem;
         margin: 0;
-        padding-bottom: .4vh;
-        padding-top: 1.2vh;
+        padding-bottom: .5rem;
+        padding-top: 1.2rem;
     }
 
     &__info {
-        text-transform: regularcase;
-        font-size: 1.3em;
+        font-size:1.2rem;
         margin: 0;
         color: $primary-accent;
     }

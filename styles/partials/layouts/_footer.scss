@@ -11,4 +11,8 @@
     text-align:center;
     font-size:$font-xmall;
     line-height:1rem;
+
+    &__link {
+        color:$primary-light;
+    }
 }

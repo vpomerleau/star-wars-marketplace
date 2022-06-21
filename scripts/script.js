@@ -1,11 +1,13 @@
 const starshipsUrl = "https://swapi.dev/api/starships/";
 const vehiclesUrl = "https://swapi.dev/api/vehicles/";
 
+// Arrays of products
 let starshipsArray = [];
+let vehiclesArray = [];
 
 function makeCard(){
     starshipsArray.forEach((user)=>{
-    const section =  document.querySelector(".cards");  
+    const section =  document.getElementById("starship-cards");  
       
     const card =  document.createElement("div");
     card.classList.add("card");
@@ -34,11 +36,6 @@ function makeCard(){
     cardPrice.classList.add("card__price");
     cardPrice.innerText = user.cost_in_credits;
     cardFront.appendChild(cardPrice);
-
-    const cardButton = document.createElement("a");
-    cardButton.classList.add("card__button");
-    cardButton.innerText="Bid Now";
-    cardFront.appendChild(cardButton);
 
     const cardBack = document.createElement("div");
     cardBack.classList.add("card", "card__back");
@@ -93,24 +90,33 @@ function makeCard(){
     cardInfo5.classList.add("card__info");
     cardInfo5.innerText=user.crew;
     cardBack.appendChild(cardInfo5);
+
+    const cardButton = document.createElement("a");
+    cardButton.classList.add("card__button");
+    cardButton.innerText="Bid Now";
+    cardBack.appendChild(cardButton);
     })
 }
+
+
+const button = document.getElementById("btn-starships");
+
+button.addEventListener('click',(event) => 
+{
+    event.preventDefault();
+    makeCard(event)
+}, {once: true});
+
 
 axios.get(starshipsUrl)
 .then(response => {
     response.data.results.forEach(object =>
         starshipsArray.push(object));
-    console.log(starshipsArray);
-
-    makeCard();
 });
-
-
-let vehiclesArray = [];
 
 function makeCardTwo(){
     vehiclesArray.forEach((user)=>{
-    const section =  document.querySelector(".cards-two");  
+    const section =  document.getElementById("vehicle-cards");  
       
     const card =  document.createElement("div");
     card.classList.add("card");
@@ -140,10 +146,10 @@ function makeCardTwo(){
     cardPrice.innerText = user.cost_in_credits;
     cardFront.appendChild(cardPrice);
 
-    const cardButton = document.createElement("a");
-    cardButton.classList.add("card__button");
-    cardButton.innerText="Bid Now";
-    cardFront.appendChild(cardButton);
+    // const cardButton = document.createElement("a");
+    // cardButton.classList.add("card__button");
+    // cardButton.innerText="Bid Now";
+    // cardFront.appendChild(cardButton);
 
     const cardBack = document.createElement("div");
     cardBack.classList.add("card", "card__back");
@@ -198,18 +204,26 @@ function makeCardTwo(){
     cardInfo5.classList.add("card__info");
     cardInfo5.innerText=user.crew;
     cardBack.appendChild(cardInfo5);
+
+    const cardButton = document.createElement("a");
+    cardButton.classList.add("card__button");
+    cardButton.innerText="Bid Now";
+    cardBack.appendChild(cardButton);
     })
 }
-
-const button = document.getElementById();
-button.addEventListener('click',getCards);
 
 axios.get(vehiclesUrl)
 .then(response => {
     response.data.results.forEach(object =>
         vehiclesArray.push(object));
     console.log(vehiclesArray);
-
-    makeCardTwo();
 })
+
+const buttonTwo = document.getElementById("btn-vehicles");
+
+buttonTwo.addEventListener('click', (event) => 
+{ 
+    event.preventDefault();
+    makeCardTwo(event)
+}, {once: true});
 
