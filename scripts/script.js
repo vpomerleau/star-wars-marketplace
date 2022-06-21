@@ -84,6 +84,11 @@ function makeStarshipCards(array){
     cardPrice.innerText = user.cost_in_credits;
     cardFront.appendChild(cardPrice);
 
+    const cardButton = document.createElement("a");
+    cardButton.classList.add("card__button");
+    cardButton.innerText="Bid Now";
+    cardFront.appendChild(cardButton);
+
     const cardBack = document.createElement("div");
     cardBack.classList.add("card", "card__back");
     cardInner.appendChild(cardBack);
@@ -138,10 +143,10 @@ function makeStarshipCards(array){
     cardInfo5.innerText=user.crew;
     cardBack.appendChild(cardInfo5);
 
-    const cardButton = document.createElement("a");
-    cardButton.classList.add("card__button");
-    cardButton.innerText="Bid Now";
-    cardBack.appendChild(cardButton);
+    const cardButtonBack = document.createElement("a");
+    cardButtonBack.classList.add("card__button");
+    cardButtonBack.innerText="Bid Now";
+    cardBack.appendChild(cardButtonBack);
     })
 }
 
@@ -178,10 +183,10 @@ function makeVehicleCards(array){
     cardPrice.innerText = user.cost_in_credits;
     cardFront.appendChild(cardPrice);
 
-    // const cardButton = document.createElement("a");
-    // cardButton.classList.add("card__button");
-    // cardButton.innerText="Bid Now";
-    // cardFront.appendChild(cardButton);
+    const cardButton = document.createElement("a");
+    cardButton.classList.add("card__button");
+    cardButton.innerText="Bid Now";
+    cardFront.appendChild(cardButton);
 
     const cardBack = document.createElement("div");
     cardBack.classList.add("card", "card__back");
@@ -237,10 +242,10 @@ function makeVehicleCards(array){
     cardInfo5.innerText=user.crew;
     cardBack.appendChild(cardInfo5);
 
-    const cardButton = document.createElement("a");
-    cardButton.classList.add("card__button");
-    cardButton.innerText="Bid Now";
-    cardBack.appendChild(cardButton);
+    const cardButtonBack = document.createElement("a");
+    cardButtonBack.classList.add("card__button");
+    cardButtonBack.innerText="Bid Now";
+    cardBack.appendChild(cardButtonBack);
     })
 }
 
