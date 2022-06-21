@@ -11,9 +11,16 @@
         justify-content: center;
     }
 
+    &__instructions {
+        flex-basis: 100%;
+        text-align:center;
+        color:$primary-light;
+        margin:$base-padding-double 0 $base-padding 0;
+    }
+
     &__button {
         @include for-tablet {
-            margin:2rem 1rem;
+            margin:1rem 1rem 2rem 1rem;
         }
     }
 
