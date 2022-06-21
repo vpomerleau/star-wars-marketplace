@@ -1,10 +1,23 @@
 // COLORS
+$primary-dark:black;
+$primary-light:white;
+$primary-accent:#FDD623;
+
+$secondary-light: #F2F2F2;
+$secondary-med: #BFBFBF;
+$secondary-dark: #3D3D3D;
 
 
 // TYPOGRAPHY - font family and fallbacks
+$header-fonts:'Star Jedi';
+$body-fonts: 'Orbitron', sans-serif;
 
 //Default font-sizes
-
+$font-xmall:0.6rem;
+$font-small:1rem;
+$font-medium:2rem;
+$font-large:2.8rem;
+$font-xlarge:4.5rem;
 
 //Default line heights
 
@@ -16,9 +29,11 @@
 // Using em units as recommended https://zellwk.com/blog/media-query-units/
 $tablet:48em;
 $desktop:80em;
+$maxwidth:100em;
 
 // SPACING
-
+$base-padding:.5rem;
+$base-padding-double:1rem;
 
 // ANIMATIONS
 // For simple feedback animations (ex. toggles, checkbox)

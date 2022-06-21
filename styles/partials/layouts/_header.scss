@@ -2,3 +2,21 @@
 @use '../base' as *;
 @use '../components';
 
+.header {
+    position:absolute;
+    top:0;
+    width:100%;
+    margin:0;
+    height:4rem;
+    padding:$base-padding $base-padding-double;
+    background-color: black;
+    display:flex;
+    justify-content: center;
+
+    &__logo {
+        font-family:$header-fonts;
+        margin:0;
+        font-size:2rem;
+        color:white;
+    }
+}

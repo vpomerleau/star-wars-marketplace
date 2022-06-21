@@ -19,10 +19,203 @@
   font-style: normal;
   font-display: swap;
 }
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/Orbitron/Orbitron-Regular.woff2") format("woff2"), url("../assets/fonts/Orbitron/Orbitron-Regular.woff") format("woff"), url("../assets/fonts/Orbitron/Orbitron-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+@font-face {
+  font-family: "Orbitron";
+  src: url("../assets/fonts/Orbitron/Orbitron-Medium.woff2") format("woff2"), url("../assets/fonts/Orbitron/Orbitron-Medium.woff") format("woff"), url("../assets/fonts/Orbitron/Orbitron-Medium.ttf") format("truetype");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+h1 {
+  font-family: "Star Jedi";
+  font-weight: 400;
+  letter-spacing: 0.5rem;
+  color: black;
+  font-size: clamp(2rem, 4vw + 1rem, 4.5rem);
+  padding: 0;
+  margin: 0 0 0.5rem 0;
+}
+
+p, a {
+  font-family: "Orbitron", sans-serif;
+  font-weight: 500;
+  letter-spacing: 3px;
+}
+
+.button {
+  display: block;
+  width: 45%;
+  padding: 0.5rem 0;
+  margin: 0.5rem 0;
+  background-color: #FDD623;
+  border-radius: 50px;
+  color: black;
+  text-decoration: none;
+  text-align: center;
+  font-size: 1rem;
+}
+@media screen and (min-width: 48em) {
+  .button {
+    width: 20rem;
+    padding: 0.5rem 3rem;
+    border-radius: 30px;
+    font-size: 2rem;
+  }
+}
+.button:hover {
+  background-color: white;
+  outline: 5px solid #FDD623;
+}
+.button--unavailable {
+  background-color: #BFBFBF;
+  font-size: 1rem;
+}
+.button--unavailable:hover {
+  background-color: #BFBFBF;
+  outline: none;
+}
+
+.footer {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  padding: 1rem;
+  background-color: black;
+  color: #F2F2F2;
+  text-align: center;
+  font-size: 0.6rem;
+  line-height: 1rem;
+}
+
+.header {
+  position: absolute;
+  top: 0;
+  width: 100%;
+  margin: 0;
+  height: 4rem;
+  padding: 0.5rem 1rem;
+  background-color: black;
+  display: flex;
+  justify-content: center;
+}
+.header__logo {
+  font-family: "Star Jedi";
+  margin: 0;
+  font-size: 2rem;
+  color: white;
+}
+
+.hero {
+  position: relative;
+  background-color: rgba(253, 214, 35, 0.8);
+  margin: 1rem;
+  padding: 1rem 3rem;
+}
+.hero__container {
+  height: 8rem;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+}
+@media screen and (min-width: 48em) {
+  .hero__container {
+    height: 10rem;
+  }
+}
+.hero__left {
+  flex-basis: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+@media screen and (min-width: 48em) {
+  .hero__left {
+    flex-basis: 100%;
+  }
+}
+.hero__right {
+  display: none;
+  align-content: center;
+}
+@media screen and (min-width: 48em) {
+  .hero__right {
+    flex-basis: 40%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.hero__title {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  background-color: #FDD623;
+  color: black;
+  padding: 0 1rem;
+}
+.hero__description {
+  width: -webkit-fit-content;
+  width: -moz-fit-content;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  background-color: white;
+  margin: 0;
+  font-size: 1rem;
+  text-align: center;
+}
+@media screen and (min-width: 48em) {
+  .hero__description {
+    text-align: left;
+  }
+}
+@media screen and (min-width: 48em) {
+  .hero__image {
+    height: clamp(15vh, 15vw + 1rem, 30vh);
+    width: auto;
+    margin: 0 1rem;
+  }
+}
+
+.navigation {
+  margin: 1rem;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-evenly;
+  align-items: center;
+}
+@media screen and (min-width: 48em) {
+  .navigation {
+    justify-content: center;
+  }
+}
+@media screen and (min-width: 48em) {
+  .navigation__button {
+    margin: 2rem 1rem;
+  }
+}
+
 *, *::before, *::after {
   box-sizing: border-box;
 }
 
 body {
   margin: 0;
+}
+
+body {
+  background: url("../assets/images/star-wars-backgrounds.jpg") no-repeat center center fixed;
+  background-size: cover;
+}
+
+main {
+  margin: 0 auto;
+  padding-top: 5rem;
+  max-width: 100em;
 }/*# sourceMappingURL=style.css.map */

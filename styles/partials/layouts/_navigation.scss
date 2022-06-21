@@ -1,0 +1,20 @@
+@use '../abstracts/' as *;
+
+.navigation {
+    margin:$base-padding-double;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    align-items:center;
+
+    @include for-tablet {
+        justify-content: center;
+    }
+
+    &__button {
+        @include for-tablet {
+            margin:2rem 1rem;
+        }
+    }
+
+}

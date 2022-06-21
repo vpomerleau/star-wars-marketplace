@@ -1,2 +1,15 @@
 @use '../abstracts' as *;
 @use '../components';
+
+
+.footer {
+    width:100%;
+    position:absolute;
+    bottom:0;
+    padding: $base-padding-double;
+    background-color: $primary-dark;
+    color:$secondary-light;
+    text-align:center;
+    font-size:$font-xmall;
+    line-height:1rem;
+}

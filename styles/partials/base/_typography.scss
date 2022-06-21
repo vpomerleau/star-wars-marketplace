@@ -1,3 +1,27 @@
 @use '../abstracts/' as *;
 
 // for h1, h2, etc.
+
+h1 {
+   font-family:$header-fonts; 
+   font-weight:400;
+   letter-spacing: .5rem;
+   color:black;
+   font-size:clamp($font-medium, 4vw + 1rem, $font-xlarge);
+   padding:0;
+   margin:0 0 $base-padding 0;
+
+//    @include for-tablet {
+//     font-size:$font-large;
+//    }
+
+//    @include for-desktop {
+//        font-size: $font-xlarge;
+//    }
+}
+
+p, a {
+    font-family: $body-fonts;
+    font-weight:500;
+    letter-spacing:3px;
+}

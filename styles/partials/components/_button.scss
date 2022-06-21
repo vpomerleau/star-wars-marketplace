@@ -1,2 +1,36 @@
 @use '../abstracts/' as *;
 
+.button {
+    display:block;
+    width:45%;
+    padding:$base-padding 0;
+    margin:0.5rem 0;
+    background-color:$primary-accent;
+    border-radius: 50px;
+    color:black;
+    text-decoration: none;
+    text-align:center;
+    font-size:$font-small;
+
+    @include for-tablet {
+        width:20rem;
+        padding:$base-padding 3rem;
+        border-radius: 30px;
+        font-size:$font-medium;
+    }
+
+    &:hover {
+        background-color: $primary-light;
+        outline:5px solid $primary-accent;
+    }
+
+    &--unavailable {
+        background-color:$secondary-med;
+        font-size:$font-small;
+
+        &:hover {
+            background-color: $secondary-med;
+            outline:none;
+        }
+    }
+}

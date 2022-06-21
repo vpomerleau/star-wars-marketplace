@@ -1,1 +1,70 @@
 @use '../abstracts' as *;
+
+.hero {
+    position:relative;
+    background-color: rgba(253, 214, 35,.8);
+    margin:$base-padding-double;
+    padding:$base-padding-double 3rem;;
+
+    &__container {
+        height:8rem;
+        width:100%;
+        display:flex;
+        justify-content: center;
+
+        @include for-tablet {
+            height:10rem;
+        }
+    }
+
+    &__left {
+        flex-basis:60%;
+        display:flex;
+        flex-direction: column;
+        justify-content: center;
+
+        @include for-tablet {
+            flex-basis:100%;
+        }
+    }
+
+    &__right {
+        display:none;
+        align-content:center;
+
+        @include for-tablet {
+            flex-basis:40%;
+            display:flex;
+            justify-content: center;
+            align-items:center;
+        }
+    }
+
+    &__title {
+        width:fit-content;
+        background-color:$primary-accent;
+        color:black;
+        padding:0 $base-padding-double;
+    }
+
+    &__description {
+        width:fit-content;
+        padding:$base-padding $base-padding-double;
+        background-color:$primary-light;
+        margin:0;
+        font-size:$font-small;
+        text-align: center;
+
+        @include for-tablet {
+            text-align:left;
+        }
+    }
+
+    &__image {
+        @include for-tablet {
+            height:clamp(15vh,15vw + 1rem, 30vh);
+            width:auto;
+            margin:0 $base-padding-double;
+        }
+    }
+}

@@ -1,1 +1,11 @@
 @use './partials/global' as *;
+
+body {
+    @include background('../assets/images/star-wars-backgrounds.jpg');
+}
+
+main {
+    margin:0 auto;
+    padding-top:5rem;
+    max-width: $maxwidth;
+}
