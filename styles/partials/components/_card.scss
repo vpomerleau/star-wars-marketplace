@@ -35,10 +35,16 @@
         width: 20rem;
         border: 1px solid $secondary-dark;
         border-radius: 5px;
-        background-image: url("../../../assets/images/starship-04.png");
         background-size: cover;
         background-position: center;
-    
+
+        &--starships {
+            background-image: url("../assets/images/starship-04.png");
+        }
+
+        &--vehicles {
+            background-image: url("../assets/images/vehicle-05.png");
+        }
     }
 
     &__back {
@@ -83,6 +89,7 @@
         color: $secondary-light;
         font-size: 1.2rem;
         border-radius: 5px;
+        cursor:pointer;
 
         &:hover {
             background-color: $primary-accent;

@@ -67,7 +67,7 @@ p, a {
   width: 45%;
   padding: 0.5rem 0;
   margin: 0.5rem 0;
-  background-color: #FDD623;
+  background-color: #F2F2F2;
   border-radius: 50px;
   color: black;
   text-decoration: none;
@@ -83,8 +83,11 @@ p, a {
   }
 }
 .button:hover {
-  background-color: white;
-  outline: 5px solid #FDD623;
+  outline: white 5px solid;
+  outline-offset: -1px;
+}
+.button:hover, .button--selected {
+  background-color: #FDD623;
 }
 
 .card {
@@ -119,9 +122,14 @@ p, a {
   width: 20rem;
   border: 1px solid #3D3D3D;
   border-radius: 5px;
-  background-image: url("../../../assets/images/starship-04.png");
   background-size: cover;
   background-position: center;
+}
+.card__front--starships {
+  background-image: url("../assets/images/starship-04.png");
+}
+.card__front--vehicles {
+  background-image: url("../assets/images/vehicle-05.png");
 }
 .card__back {
   text-align: left;
@@ -164,6 +172,7 @@ p, a {
   color: #F2F2F2;
   font-size: 1.2rem;
   border-radius: 5px;
+  cursor: pointer;
 }
 .card__button:hover {
   background-color: #FDD623;

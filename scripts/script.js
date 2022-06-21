@@ -29,11 +29,21 @@ axios
     console.log(error);
 });
 
-// Display starship cards and hide vehicle cards when "starship" button clicked
-const starshipButton = document.getElementById("btn-starships");
-starshipButton.addEventListener('click',(event) => 
+// Listen to category buttons and hide/display relevant cards
+const starshipsButton = document.getElementById("btn-starships");
+const vehiclesButton = document.getElementById("btn-vehicles")
+
+starshipsButton.addEventListener('click',(event) => 
 {
     event.preventDefault();
+
+    if (!starshipsButton.classList.contains('button--selected')){
+        starshipsButton.classList.add('button--selected');
+    }
+    if (vehiclesButton.classList.contains('button--selected')){
+        vehiclesButton.classList.remove('button--selected');
+    };
+
     const starshipsSection =  document.getElementById("starship-cards");
     const vehiclesSection =  document.getElementById("vehicle-cards");
     if (starshipsSection.classList.contains('cards--hidden')) {
@@ -44,11 +54,17 @@ starshipButton.addEventListener('click',(event) =>
     };
 });
 
-// Display starship cards and hide vehicle cards when "starship" button clicked
-const vehiclesButton = document.getElementById("btn-vehicles");
 vehiclesButton.addEventListener('click', (event) => 
 { 
     event.preventDefault();
+
+    if (!vehiclesButton.classList.contains('button--selected')){
+        vehiclesButton.classList.add('button--selected');
+    }
+    if (starshipsButton.classList.contains('button--selected')){
+        starshipsButton.classList.remove('button--selected');
+    };
+
     const vehiclesSection =  document.getElementById("vehicle-cards");
     const starshipsSection =  document.getElementById("starship-cards");
     if (vehiclesSection.classList.contains('cards--hidden')) {
@@ -74,13 +90,8 @@ function makeStarshipCards(array){
 
     const cardFront = document.createElement("div");
     cardFront.classList.add("card__front");
+    cardFront.classList.add("card__front--starships");
     cardInner.appendChild(cardFront);
-
-    const cardImage = document.createElement("img");
-    cardImage.classList.add("card__image");
-    cardImage.setAttribute("src", "#");
-    cardImage.setAttribute("alt", " ");
-    cardFront.appendChild(cardImage);
 
     const cardName = document.createElement("h2");
     cardName.classList.add("card__name");
@@ -89,11 +100,12 @@ function makeStarshipCards(array){
 
     const cardPrice = document.createElement("p");
     cardPrice.classList.add("card__price");
-    cardPrice.innerText = user.cost_in_credits;
+    cardPrice.innerText = `Credits:\n${user.cost_in_credits}`;
     cardFront.appendChild(cardPrice);
 
     const cardButton = document.createElement("a");
     cardButton.classList.add("card__button");
+    cardButton.setAttribute('tabindex','0');
     cardButton.innerText="Bid Now";
     cardFront.appendChild(cardButton);
 
@@ -173,13 +185,8 @@ function makeVehicleCards(array){
 
     const cardFront = document.createElement("div");
     cardFront.classList.add("card__front");
+    cardFront.classList.add("card__front--vehicles");
     cardInner.appendChild(cardFront);
-
-    const cardImage = document.createElement("img");
-    cardImage.classList.add("card__image");
-    cardImage.setAttribute("src", "#");
-    cardImage.setAttribute("alt", " ");
-    cardFront.appendChild(cardImage);
 
     const cardName = document.createElement("h2");
     cardName.classList.add("card__name");
@@ -188,11 +195,12 @@ function makeVehicleCards(array){
 
     const cardPrice = document.createElement("p");
     cardPrice.classList.add("card__price");
-    cardPrice.innerText = user.cost_in_credits;
+    cardPrice.innerText = `Credits:\n${user.cost_in_credits}`;
     cardFront.appendChild(cardPrice);
 
     const cardButton = document.createElement("a");
     cardButton.classList.add("card__button");
+    cardButton.setAttribute('tabindex','0');
     cardButton.innerText="Bid Now";
     cardFront.appendChild(cardButton);
 
@@ -256,4 +264,3 @@ function makeVehicleCards(array){
     cardBack.appendChild(cardButtonBack);
     })
 }
-

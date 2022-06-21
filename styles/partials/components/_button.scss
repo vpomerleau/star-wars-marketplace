@@ -5,7 +5,7 @@
     width:45%;
     padding:$base-padding 0;
     margin:0.5rem 0;
-    background-color:$primary-accent;
+    background-color:$secondary-light;
     border-radius: 50px;
     color:black;
     text-decoration: none;
@@ -20,7 +20,11 @@
     }
 
     &:hover {
-        background-color: $primary-light;
-        outline:5px solid $primary-accent;
+        outline: $primary-light 5px solid;
+        outline-offset: -1px;
+    }
+
+    &:hover, &--selected {
+        background-color: $primary-accent;
     }
 }
